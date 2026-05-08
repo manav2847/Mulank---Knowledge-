@@ -1,188 +1,132 @@
-def calculate_mulank():
-    while True:
-        try:
-            # 1. Get user input
-            date_input = int(input("Please enter your birth date (1-31): "))
-
-            # 2. Validate the date
-            if date_input < 1 or date_input > 31:
-                print("You had chosen a wrong date. Please try again.")
-                print("-" * 30)
-                continue # Restarts the loop
-
-            # 3. Logic to calculate Mulank (sum of digits)
-            # We use (date - 1) % 9 + 1 as a clean way to get the root digit
-            mulank = (date_input - 1) % 9 + 1
-
-            print(f"\nCongratulation! You are Mulank {mulank}")
-            print("-" * 30)
-
-            # 4. Details Sections - Type your custom details inside the print("")
-            if mulank == 1:
-                # Dates: 1, 10, 19, 28
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 1 (The leader Ruled by The 'SUN')")
-                print('''Born on: 1st, 10th, 19th, 28th
-
-Personality: Ambitious, independent, and a natural-born leader. You have high self-respect and original ideas.
-
-Best Colors: Golden, Yellow, and Orange.
-
-Passion: Success, innovation, and holding positions of authority.
-
-Love Life: Loyal but likes to be the "boss." Needs a supportive and respectful partner.
-
-To Impress Them: Show genuine respect for their work and value their time.
-
-Keep in Mind: Avoid being overly egoistic or stubborn. Don’t let your "fiery" temper make decisions for you.''')
-            elif mulank == 2:
-                # Dates: 2, 11, 20, 29
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 2 (The Peacekeeper Ruled by The 'MOON') ")
-                print('''Born on: 2nd, 11th, 20th, 29th
-
-Personality: Gentle, highly emotional, and imaginative. You are a natural diplomat who prefers harmony over conflict.
-
-Best Colors: White, Cream, and Light Green.
-
-Passion: Arts, music, poetry, and any work involving creativity or helping others.
-
-Love Life: Extremely romantic and sensitive. You seek deep emotional connection and a peaceful home life.
-
-To Impress Them: Use soft words, be a good listener, and appreciate their creative ideas.
-
-Keep in Mind: Avoid overthinking and being "moody." Don't let others' opinions easily hurt your feelings or shake your confidence.''')
-
-            elif mulank == 3:
-                # Dates: 3, 12, 21, 30
-                print("Details:> Your birth date Is :" , date_input )
-                print("Mulank 3 (The Counselor Ruled by 'JUPITER')")
-                print('''Born on: 3rd, 12th, 21st, 30th
-
-Personality: Intellectual, disciplined, and very talkative. You have a natural "Guru" vibe and love sharing knowledge with others.
-
-Best Colors: Yellow, Pink, and Light Purple.
-
-Passion: Education, public speaking, writing, and spiritual growth. You love to constantly learn.
-
-Love Life: You look for an intellectual partner. While you are loyal, you value your personal space and mental growth above all.
-
-To Impress Them: Engage them in deep conversations. Show that you are ambitious and respect their wisdom.
-
-Keep in Mind: Don't be "bossy" or give advice where it isn't asked for. Avoid over-spending and try not to be overly critical of others.''')
-
-            elif mulank == 4:
-                # Dates: 4, 13, 22, 31
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 4 (The Innovator Ruled by 'RAHU')")
-                print('''Born on: 4th, 13th, 22nd, 31st
-
-Personality: Practical, hardworking, and logical. You often have a different perspective than the crowd and aren't afraid to challenge old traditions.
-
-Best Colors: Blue, Grey, and Khaki.
-
-Passion: Technology, engineering, research, and social reforms. You love "solving" complex problems.
-
-Love Life: You are very cautious and take time to trust. You look for a stable, honest partner who can handle your unpredictable nature.
-
-To Impress Them: Be straightforward and logical. They dislike "sugar-coating" and appreciate people who are punctual and organized.
-
-Keep in Mind: Avoid being overly stubborn or argumentative. Don't let your "sudden" anger or revolutionary thoughts isolate you from friends and family.''')
-
-            elif mulank == 5:
-                # Date: 5, 14, 23
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 5 (The Messenger Ruled by 'MERCURY')")
-                print('''Born on: 5th, 14th, 23rd
-
-Personality: Energetic, intelligent, and extremely versatile. You have a "youthful" spirit and can make friends with almost anyone instantly.
-
-Best Colors: Light Green and White.
-
-Passion: Travel, communication, trading, and quick-witted entertainment. You hate sitting still or doing boring, repetitive tasks.
-
-Love Life: You look for a partner who is mentally stimulating. You value your freedom and need someone who isn't overly possessive.
-
-To Impress Them: Be witty and spontaneous. They love people who can keep up with their fast conversation and enjoy trying new things.
-
-Keep in Mind: Avoid being impulsive with your decisions. Don’t start too many things at once—practice finishing one project before moving to the next.''')
-
-            elif mulank == 6:
-                # Date: 6, 15, 24
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 6 (The Romantic Ruled by 'VENUS')")
-                print('''Born on: 6th, 15th, 24th
-
-Personality: Attractive, compassionate, and family-oriented. You have a natural sense of style and a deep love for harmony and "the good life."
-
-Best Colors: Royal Blue, Pink, and White.
-
-Passion: Fashion, luxury, interior design, and hospitality. You enjoy making everything around you look beautiful.
-
-Love Life: You are the most romantic of all numbers. You are a devoted partner who values stability and physical affection.
-
-To Impress Them: Appreciate their taste and dress well. They are easily impressed by good manners, expensive gifts, and a pleasant scent (perfume).
-
-Keep in Mind: Avoid being overly materialistic or "extravagant." Don't interfere too much in others' lives out of love, as it can be seen as "controlling." ''')
-
-            elif mulank == 7:
-                # Date: 7, 16, 25
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 7 (The Philosopher Ruled by 'KETU')")
-                print('''Born on: 7th, 16th, 25th
-
-Personality: Spiritual, quiet, and highly observant. You have a "detective" mind and can easily see through lies or fake people.
-
-Best Colors: Light Green, White, and Yellow.
-
-Passion: Research, philosophy, spirituality, and nature. You love spending time alone to recharge your energy.
-
-Love Life: You are a deep lover but can be hard to understand. You need a partner who respects your silence and your need for "me-time."
-
-To Impress Them: Be authentic and deep. They hate small talk; they are impressed by people who have a calm aura and intellectual depth.
-
-Keep in Mind: Avoid overthinking and isolating yourself too much. Don’t let your "restless" mind lead to unnecessary anxiety or distrust of others.''')
-
-            elif mulank == 8:
-                # Date: 8, 17, 26
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 8 (The Achiever Ruled by 'SATURN')")                
-                print('''Born on: 8th, 17th, 26th
-
-Personality: Highly disciplined, serious, and patient. You are a "slow and steady" winner who faces struggles early in life but achieves great power later.
-
-Best Colors: Dark Blue and Black.
-
-Passion: Business, law, administration, and large-scale management. You have a massive capacity for hard work.
-
-Love Life: You are very loyal but struggle to express your feelings. You look for a partner who is stable and understands your dedication to work.
-
-To Impress Them: Show them your ambition and maturity. They respect people who are grounded, hardworking, and don't make empty promises.
-
-Keep in Mind: Avoid being too cold or "judgmental" toward others. Don't lose hope during delays—your success is guaranteed if you stay patient and ethical.''')
-
-            elif mulank == 9:
-                # Date: 9, 18, 27
-                print("Details:> Your birth date Is :" , date_input)
-                print("Mulank 9 (The Warrior Ruled by 'MARS') ")
-                print('''Born on: 9th, 18th, 27th
-
-Personality: Brave, humanitarian, and highly energetic. You have a strong sense of justice and will fight for what is right, often putting others before yourself.
-
-Best Colors: Red and Pink.
-
-Passion: Sports, social work, defense/police, and anything involving high physical or mental energy.
-
-Love Life: You are passionate and protective. You look for a partner who is honest and can handle your strong, sometimes "fiery" personality.
-
-To Impress Them: Show them your courage and kindness. They are impressed by people who are straightforward, active, and have a helping nature.
-
-Keep in Mind: Avoid unnecessary anger and "short-tempered" reactions. Don't let your ego interfere with your relationships—practice patience and forgiveness. ''')
-
-            break # Exit loop after successful calculation
-
-        except ValueError:
-            print("Invalid input! Please enter a number only.")
+import streamlit as st
+
+# --- PAGE CONFIG ---
+st.set_page_config(page_title="Mulank Knowledge", page_icon="🔮", layout="centered")
+
+# --- CUSTOM STYLING ---
+st.markdown("""
+    <style>
+    .main {
+        background-color: #f5f7f9;
+    }
+    .stButton>button {
+        width: 100%;
+        border-radius: 5px;
+        height: 3em;
+        background-color: #ff4b4b;
+        color: white;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+def main():
+    # 1. Header Section
+    st.title("🔮 Mulank Knowledge")
+    st.subheader("Discover your inner qualities based on your birth date")
+    st.write("---")
+
+    # 2. Get User Input using a slider or number input (Web-friendly)
+    date_input = st.number_input("Enter your birth date (1-31):", min_value=1, max_value=31, value=1)
+
+    # 3. Logic to calculate Mulank
+    if st.button("Calculate My Mulank"):
+        mulank = (date_input - 1) % 9 + 1
+        
+        st.balloons() # Fun animation
+        st.success(f"### Congratulations! You are Mulank {mulank}")
+        st.write(f"**Details for Birth Date:** {date_input}")
+        st.write("-" * 30)
+
+        # 4. Details Sections
+        if mulank == 1:
+            st.info("### Mulank 1 (The Leader - Ruled by the 'SUN')")
+            st.markdown('''**Born on:** 1st, 10th, 19th, 28th
+            \n**Personality:** Ambitious, independent, and a natural-born leader. You have high self-respect and original ideas.
+            \n**Best Colors:** Golden, Yellow, and Orange.
+            \n**Passion:** Success, innovation, and holding positions of authority.
+            \n**Love Life:** Loyal but likes to be the "boss." Needs a supportive and respectful partner.
+            \n**To Impress Them:** Show genuine respect for their work and value their time.
+            \n**Keep in Mind:** Avoid being overly egoistic or stubborn. Don’t let your "fiery" temper make decisions for you.''')
+
+        elif mulank == 2:
+            st.info("### Mulank 2 (The Peacekeeper - Ruled by the 'MOON')")
+            st.markdown('''**Born on:** 2nd, 11th, 20th, 29th
+            \n**Personality:** Gentle, highly emotional, and imaginative. You are a natural diplomat who prefers harmony over conflict.
+            \n**Best Colors:** White, Cream, and Light Green.
+            \n**Passion:** Arts, music, poetry, and any work involving creativity or helping others.
+            \n**Love Life:** Extremely romantic and sensitive. You seek deep emotional connection and a peaceful home life.
+            \n**To Impress Them:** Use soft words, be a good listener, and appreciate their creative ideas.
+            \n**Keep in Mind:** Avoid overthinking and being "moody." Don't let others' opinions easily hurt your feelings.''')
+
+        elif mulank == 3:
+            st.info("### Mulank 3 (The Counselor - Ruled by 'JUPITER')")
+            st.markdown('''**Born on:** 3rd, 12th, 21st, 30th
+            \n**Personality:** Intellectual, disciplined, and very talkative. You have a natural "Guru" vibe and love sharing knowledge.
+            \n**Best Colors:** Yellow, Pink, and Light Purple.
+            \n**Passion:** Education, public speaking, writing, and spiritual growth.
+            \n**Love Life:** You look for an intellectual partner. You value your personal space and mental growth.
+            \n**To Impress Them:** Engage them in deep conversations. Respect their wisdom.
+            \n**Keep in Mind:** Don't be "bossy." Avoid over-spending and try not to be overly critical of others.''')
+
+        elif mulank == 4:
+            st.info("### Mulank 4 (The Innovator - Ruled by 'RAHU')")
+            st.markdown('''**Born on:** 4th, 13th, 22nd, 31st
+            \n**Personality:** Practical, hardworking, and logical. You aren't afraid to challenge old traditions.
+            \n**Best Colors:** Blue, Grey, and Khaki.
+            \n**Passion:** Technology, engineering, research, and social reforms.
+            \n**Love Life:** Cautious and takes time to trust. You look for a stable, honest partner.
+            \n**To Impress Them:** Be straightforward and logical. They dislike "sugar-coating."
+            \n**Keep in Mind:** Avoid being overly stubborn or argumentative. Don't isolate yourself.''')
+
+        elif mulank == 5:
+            st.info("### Mulank 5 (The Messenger - Ruled by 'MERCURY')")
+            st.markdown('''**Born on:** 5th, 14th, 23rd
+            \n**Personality:** Energetic, intelligent, and extremely versatile. You have a "youthful" spirit.
+            \n**Best Colors:** Light Green and White.
+            \n**Passion:** Travel, communication, trading, and quick-witted entertainment.
+            \n**Love Life:** You look for a partner who is mentally stimulating. You value your freedom.
+            \n**To Impress Them:** Be witty and spontaneous. They love people who can keep up with them.
+            \n**Keep in Mind:** Avoid being impulsive. Practice finishing one project before moving to the next.''')
+
+        elif mulank == 6:
+            st.info("### Mulank 6 (The Romantic - Ruled by 'VENUS')")
+            st.markdown('''**Born on:** 6th, 15th, 24th
+            \n**Personality:** Attractive, compassionate, and family-oriented. You have a natural sense of style.
+            \n**Best Colors:** Royal Blue, Pink, and White.
+            \n**Passion:** Fashion, luxury, interior design, and hospitality.
+            \n**Love Life:** The most romantic of all numbers. You are a devoted partner.
+            \n**To Impress Them:** Appreciate their taste and dress well. Good manners are key.
+            \n**Keep in Mind:** Avoid being overly materialistic. Don't be too "controlling" in relationships.''')
+
+        elif mulank == 7:
+            st.info("### Mulank 7 (The Philosopher - Ruled by 'KETU')")
+            st.markdown('''**Born on:** 7th, 16th, 25th
+            \n**Personality:** Spiritual, quiet, and highly observant. You have a "detective" mind.
+            \n**Best Colors:** Light Green, White, and Yellow.
+            \n**Passion:** Research, philosophy, spirituality, and nature.
+            \n**Love Life:** Deep lover but hard to understand. You need a partner who respects "me-time."
+            \n**To Impress Them:** Be authentic and deep. They hate small talk.
+            \n**Keep in Mind:** Avoid overthinking and isolating yourself too much.''')
+
+        elif mulank == 8:
+            st.info("### Mulank 8 (The Achiever - Ruled by 'SATURN')")
+            st.markdown('''**Born on:** 8th, 17th, 26th
+            \n**Personality:** Highly disciplined, serious, and patient. You are a "slow and steady" winner.
+            \n**Best Colors:** Dark Blue and Black.
+            \n**Passion:** Business, law, administration, and large-scale management.
+            \n**Love Life:** Very loyal but struggles to express feelings. You look for stability.
+            \n**To Impress Them:** Show them your ambition and maturity. Don't make empty promises.
+            \n**Keep in Mind:** Avoid being too cold. Don't lose hope during delays—success is guaranteed.''')
+
+        elif mulank == 9:
+            st.info("### Mulank 9 (The Warrior - Ruled by 'MARS')")
+            st.markdown('''**Born on:** 9th, 18th, 27th
+            \n**Personality:** Brave, humanitarian, and highly energetic. You have a strong sense of justice.
+            \n**Best Colors:** Red and Pink.
+            \n**Passion:** Sports, social work, defense, and high-energy tasks.
+            \n**Love Life:** Passionate and protective. You look for an honest partner.
+            \n**To Impress Them:** Show them your courage and kindness. Be straightforward.
+            \n**Keep in Mind:** Avoid unnecessary anger. Practice patience and forgiveness.''')
 
 if __name__ == "__main__":
-    calculate_mulank()
+    main()
