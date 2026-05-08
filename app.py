@@ -13,7 +13,7 @@ st.markdown("""
         width: 100%;
         border-radius: 5px;
         height: 3em;
-        background-color: #4bfff3;
+        background-color: #0fcef5;
         color: white;
     }
     </style>
