@@ -3,120 +3,130 @@ import streamlit as st
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Mulank Knowledge", page_icon="🔮", layout="centered")
 
+# --- CUSTOM STYLING ---
+st.markdown("""
+    <style>
+    .main {
+        background-color: #f5f7f9;
+    }
+    .stButton>button {
+        width: 100%;
+        border-radius: 5px;
+        height: 3em;
+        background-color: #ff4b4b;
+        color: white;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 def main():
+    # 1. Header Section
     st.title("🔮 Mulank Knowledge")
     st.subheader("Discover your inner qualities based on your birth date")
     st.write("---")
 
+    # 2. Get User Input using a slider or number input (Web-friendly)
     date_input = st.number_input("Enter your birth date (1-31):", min_value=1, max_value=31, value=1)
 
+    # 3. Logic to calculate Mulank
     if st.button("Calculate My Mulank"):
         mulank = (date_input - 1) % 9 + 1
         
-        st.balloons() 
+        st.balloons() # Fun animation
         st.success(f"### Congratulations! You are Mulank {mulank}")
         st.write(f"**Details for Birth Date:** {date_input}")
         st.write("-" * 30)
 
-        # Content logic with bolded keys
+        # 4. Details Sections
         if mulank == 1:
             st.info("### Mulank 1 (The Leader - Ruled by the 'SUN')")
-            st.markdown(f'''
-            * **Born on:** 1st, 10th, 19th, 28th
-            * **Personality:** Ambitious, independent, and a natural-born leader.
-            * **Best Colors:** Golden, Yellow, and Orange.
-            * **Passion:** Success, innovation, and holding positions of authority.
-            * **Love Life:** Loyal but likes to be the "boss."
-            * **To Impress Them:** Show genuine respect for their work.
-            * **Keep in Mind:** Avoid being overly egoistic or stubborn.''')
+            st.markdown('''**Born on:** 1st, 10th, 19th, 28th
+            \n**Personality:** Ambitious, independent, and a natural-born leader. You have high self-respect and original ideas.
+            \n**Best Colors:** Golden, Yellow, and Orange.
+            \n**Passion:** Success, innovation, and holding positions of authority.
+            \n**Love Life:** Loyal but likes to be the "boss." Needs a supportive and respectful partner.
+            \n**To Impress Them:** Show genuine respect for their work and value their time.
+            \n**Keep in Mind:** Avoid being overly egoistic or stubborn. Don’t let your "fiery" temper make decisions for you.''')
 
         elif mulank == 2:
             st.info("### Mulank 2 (The Peacekeeper - Ruled by the 'MOON')")
-            st.markdown(f'''
-            * **Born on:** 2nd, 11th, 20th, 29th
-            * **Personality:** Gentle, highly emotional, and imaginative.
-            * **Best Colors:** White, Cream, and Light Green.
-            * **Passion:** Arts, music, poetry, and creativity.
-            * **Love Life:** Extremely romantic and sensitive.
-            * **To Impress Them:** Use soft words and be a good listener.
-            * **Keep in Mind:** Avoid overthinking and being "moody."''')
+            st.markdown('''**Born on:** 2nd, 11th, 20th, 29th
+            \n**Personality:** Gentle, highly emotional, and imaginative. You are a natural diplomat who prefers harmony over conflict.
+            \n**Best Colors:** White, Cream, and Light Green.
+            \n**Passion:** Arts, music, poetry, and any work involving creativity or helping others.
+            \n**Love Life:** Extremely romantic and sensitive. You seek deep emotional connection and a peaceful home life.
+            \n**To Impress Them:** Use soft words, be a good listener, and appreciate their creative ideas.
+            \n**Keep in Mind:** Avoid overthinking and being "moody." Don't let others' opinions easily hurt your feelings.''')
 
         elif mulank == 3:
             st.info("### Mulank 3 (The Counselor - Ruled by 'JUPITER')")
-            st.markdown(f'''
-            * **Born on:** 3rd, 12th, 21st, 30th
-            * **Personality:** Intellectual, disciplined, and very talkative.
-            * **Best Colors:** Yellow, Pink, and Light Purple.
-            * **Passion:** Education, public speaking, and writing.
-            * **Love Life:** You look for an intellectual partner.
-            * **To Impress Them:** Engage them in deep conversations.
-            * **Keep in Mind:** Don't be "bossy" or give unasked advice.''')
+            st.markdown('''**Born on:** 3rd, 12th, 21st, 30th
+            \n**Personality:** Intellectual, disciplined, and very talkative. You have a natural "Guru" vibe and love sharing knowledge.
+            \n**Best Colors:** Yellow, Pink, and Light Purple.
+            \n**Passion:** Education, public speaking, writing, and spiritual growth.
+            \n**Love Life:** You look for an intellectual partner. You value your personal space and mental growth.
+            \n**To Impress Them:** Engage them in deep conversations. Respect their wisdom.
+            \n**Keep in Mind:** Don't be "bossy." Avoid over-spending and try not to be overly critical of others.''')
 
         elif mulank == 4:
             st.info("### Mulank 4 (The Innovator - Ruled by 'RAHU')")
-            st.markdown(f'''
-            * **Born on:** 4th, 13th, 22nd, 31st
-            * **Personality:** Practical, hardworking, and logical.
-            * **Best Colors:** Blue, Grey, and Khaki.
-            * **Passion:** Technology, engineering, and research.
-            * **Love Life:** Cautious and takes time to trust.
-            * **To Impress Them:** Be straightforward and logical.
-            * **Keep in Mind:** Avoid being overly stubborn or argumentative.''')
+            st.markdown('''**Born on:** 4th, 13th, 22nd, 31st
+            \n**Personality:** Practical, hardworking, and logical. You aren't afraid to challenge old traditions.
+            \n**Best Colors:** Blue, Grey, and Khaki.
+            \n**Passion:** Technology, engineering, research, and social reforms.
+            \n**Love Life:** Cautious and takes time to trust. You look for a stable, honest partner.
+            \n**To Impress Them:** Be straightforward and logical. They dislike "sugar-coating."
+            \n**Keep in Mind:** Avoid being overly stubborn or argumentative. Don't isolate yourself.''')
 
         elif mulank == 5:
             st.info("### Mulank 5 (The Messenger - Ruled by 'MERCURY')")
-            st.markdown(f'''
-            * **Born on:** 5th, 14th, 23rd
-            * **Personality:** Energetic, intelligent, and extremely versatile.
-            * **Best Colors:** Light Green and White.
-            * **Passion:** Travel, communication, and trading.
-            * **Love Life:** Needs mental stimulation and freedom.
-            * **To Impress Them:** Be witty and spontaneous.
-            * **Keep in Mind:** Avoid being impulsive with decisions.''')
+            st.markdown('''**Born on:** 5th, 14th, 23rd
+            \n**Personality:** Energetic, intelligent, and extremely versatile. You have a "youthful" spirit.
+            \n**Best Colors:** Light Green and White.
+            \n**Passion:** Travel, communication, trading, and quick-witted entertainment.
+            \n**Love Life:** You look for a partner who is mentally stimulating. You value your freedom.
+            \n**To Impress Them:** Be witty and spontaneous. They love people who can keep up with them.
+            \n**Keep in Mind:** Avoid being impulsive. Practice finishing one project before moving to the next.''')
 
         elif mulank == 6:
             st.info("### Mulank 6 (The Romantic - Ruled by 'VENUS')")
-            st.markdown(f'''
-            * **Born on:** 6th, 15th, 24th
-            * **Personality:** Attractive, compassionate, and family-oriented.
-            * **Best Colors:** Royal Blue, Pink, and White.
-            * **Passion:** Fashion, luxury, and interior design.
-            * **Love Life:** Devoted partner who values stability.
-            * **To Impress Them:** Appreciate their taste and dress well.
-            * **Keep in Mind:** Avoid being overly materialistic.''')
+            st.markdown('''**Born on:** 6th, 15th, 24th
+            \n**Personality:** Attractive, compassionate, and family-oriented. You have a natural sense of style.
+            \n**Best Colors:** Royal Blue, Pink, and White.
+            \n**Passion:** Fashion, luxury, interior design, and hospitality.
+            \n**Love Life:** The most romantic of all numbers. You are a devoted partner.
+            \n**To Impress Them:** Appreciate their taste and dress well. Good manners are key.
+            \n**Keep in Mind:** Avoid being overly materialistic. Don't be too "controlling" in relationships.''')
 
         elif mulank == 7:
             st.info("### Mulank 7 (The Philosopher - Ruled by 'KETU')")
-            st.markdown(f'''
-            * **Born on:** 7th, 16th, 25th
-            * **Personality:** Spiritual, quiet, and highly observant.
-            * **Best Colors:** Light Green, White, and Yellow.
-            * **Passion:** Research, philosophy, and nature.
-            * **Love Life:** Needs a partner who respects silence.
-            * **To Impress Them:** Be authentic and deep.
-            * **Keep in Mind:** Avoid overthinking and isolating yourself.''')
+            st.markdown('''**Born on:** 7th, 16th, 25th
+            \n**Personality:** Spiritual, quiet, and highly observant. You have a "detective" mind.
+            \n**Best Colors:** Light Green, White, and Yellow.
+            \n**Passion:** Research, philosophy, spirituality, and nature.
+            \n**Love Life:** Deep lover but hard to understand. You need a partner who respects "me-time."
+            \n**To Impress Them:** Be authentic and deep. They hate small talk.
+            \n**Keep in Mind:** Avoid overthinking and isolating yourself too much.''')
 
         elif mulank == 8:
             st.info("### Mulank 8 (The Achiever - Ruled by 'SATURN')")
-            st.markdown(f'''
-            * **Born on:** 8th, 17th, 26th
-            * **Personality:** Highly disciplined, serious, and patient.
-            * **Best Colors:** Dark Blue and Black.
-            * **Passion:** Business, law, and administration.
-            * **Love Life:** Very loyal but struggles with expression.
-            * **To Impress Them:** Show them your ambition and maturity.
-            * **Keep in Mind:** Avoid being too cold or judgmental.''')
+            st.markdown('''**Born on:** 8th, 17th, 26th
+            \n**Personality:** Highly disciplined, serious, and patient. You are a "slow and steady" winner.
+            \n**Best Colors:** Dark Blue and Black.
+            \n**Passion:** Business, law, administration, and large-scale management.
+            \n**Love Life:** Very loyal but struggles to express feelings. You look for stability.
+            \n**To Impress Them:** Show them your ambition and maturity. Don't make empty promises.
+            \n**Keep in Mind:** Avoid being too cold. Don't lose hope during delays—success is guaranteed.''')
 
         elif mulank == 9:
             st.info("### Mulank 9 (The Warrior - Ruled by 'MARS')")
-            st.markdown(f'''
-            * **Born on:** 9th, 18th, 27th
-            * **Personality:** Brave, humanitarian, and highly energetic.
-            * **Best Colors:** Red and Pink.
-            * **Passion:** Sports, social work, and defense.
-            * **Love Life:** Passionate and protective.
-            * **To Impress Them:** Show them your courage and kindness.
-            * **Keep in Mind:** Avoid unnecessary anger and ego.''')
+            st.markdown('''**Born on:** 9th, 18th, 27th
+            \n**Personality:** Brave, humanitarian, and highly energetic. You have a strong sense of justice.
+            \n**Best Colors:** Red and Pink.
+            \n**Passion:** Sports, social work, defense, and high-energy tasks.
+            \n**Love Life:** Passionate and protective. You look for an honest partner.
+            \n**To Impress Them:** Show them your courage and kindness. Be straightforward.
+            \n**Keep in Mind:** Avoid unnecessary anger. Practice patience and forgiveness.''')
 
 if __name__ == "__main__":
     main()
