@@ -7,13 +7,13 @@ st.set_page_config(page_title="Mulank Knowledge", page_icon="🔮", layout="cent
 st.markdown("""
     <style>
     .main {
-        background-color: #4bfff3;
+        background-color: #ff4b4b;
     }
     .stButton>button {
         width: 100%;
         border-radius: 5px;
         height: 3em;
-        background-color: #ff4b4b;
+        background-color: #4bfff3;
         color: white;
     }
     </style>
