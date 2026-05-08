@@ -40,7 +40,7 @@ def main():
         # 4. Details Sections
         if mulank == 1:
             st.info("### Mulank 1 (The Leader - Ruled by the 'SUN')")
-            st.markdown('''**Born on:** 1st, 10th, 19th, 28th
+            st.markdown('''**Born on:** 1st, 10th, 19th, 28th date of any Month
             \n**Personality:** Ambitious, independent, and a natural-born leader. You have high self-respect and original ideas.
             \n**Best Colors:** Golden, Yellow, and Orange.
             \n**Passion:** Success, innovation, and holding positions of authority.
@@ -50,7 +50,7 @@ def main():
 
         elif mulank == 2:
             st.info("### Mulank 2 (The Peacekeeper - Ruled by the 'MOON')")
-            st.markdown('''**Born on:** 2nd, 11th, 20th, 29th
+            st.markdown('''**Born on:** 2nd, 11th, 20th, 29th date of any Month
             \n**Personality:** Gentle, highly emotional, and imaginative. You are a natural diplomat who prefers harmony over conflict.
             \n**Best Colors:** White, Cream, and Light Green.
             \n**Passion:** Arts, music, poetry, and any work involving creativity or helping others.
@@ -60,7 +60,7 @@ def main():
 
         elif mulank == 3:
             st.info("### Mulank 3 (The Counselor - Ruled by 'JUPITER')")
-            st.markdown('''**Born on:** 3rd, 12th, 21st, 30th
+            st.markdown('''**Born on:** 3rd, 12th, 21st, 30th date of any Month
             \n**Personality:** Intellectual, disciplined, and very talkative. You have a natural "Guru" vibe and love sharing knowledge.
             \n**Best Colors:** Yellow, Pink, and Light Purple.
             \n**Passion:** Education, public speaking, writing, and spiritual growth.
@@ -70,7 +70,7 @@ def main():
 
         elif mulank == 4:
             st.info("### Mulank 4 (The Innovator - Ruled by 'RAHU')")
-            st.markdown('''**Born on:** 4th, 13th, 22nd, 31st
+            st.markdown('''**Born on:** 4th, 13th, 22nd, 31st date of any Month
             \n**Personality:** Practical, hardworking, and logical. You aren't afraid to challenge old traditions.
             \n**Best Colors:** Blue, Grey, and Khaki.
             \n**Passion:** Technology, engineering, research, and social reforms.
@@ -80,7 +80,7 @@ def main():
 
         elif mulank == 5:
             st.info("### Mulank 5 (The Messenger - Ruled by 'MERCURY')")
-            st.markdown('''**Born on:** 5th, 14th, 23rd
+            st.markdown('''**Born on:** 5th, 14th, 23rd date of any Month
             \n**Personality:** Energetic, intelligent, and extremely versatile. You have a "youthful" spirit.
             \n**Best Colors:** Light Green and White.
             \n**Passion:** Travel, communication, trading, and quick-witted entertainment.
@@ -90,7 +90,7 @@ def main():
 
         elif mulank == 6:
             st.info("### Mulank 6 (The Romantic - Ruled by 'VENUS')")
-            st.markdown('''**Born on:** 6th, 15th, 24th
+            st.markdown('''**Born on:** 6th, 15th, 24th date of any Month
             \n**Personality:** Attractive, compassionate, and family-oriented. You have a natural sense of style.
             \n**Best Colors:** Royal Blue, Pink, and White.
             \n**Passion:** Fashion, luxury, interior design, and hospitality.
@@ -100,7 +100,7 @@ def main():
 
         elif mulank == 7:
             st.info("### Mulank 7 (The Philosopher - Ruled by 'KETU')")
-            st.markdown('''**Born on:** 7th, 16th, 25th
+            st.markdown('''**Born on:** 7th, 16th, 25th date of any Month
             \n**Personality:** Spiritual, quiet, and highly observant. You have a "detective" mind.
             \n**Best Colors:** Light Green, White, and Yellow.
             \n**Passion:** Research, philosophy, spirituality, and nature.
@@ -110,7 +110,7 @@ def main():
 
         elif mulank == 8:
             st.info("### Mulank 8 (The Achiever - Ruled by 'SATURN')")
-            st.markdown('''**Born on:** 8th, 17th, 26th
+            st.markdown('''**Born on:** 8th, 17th, 26th date of any Month
             \n**Personality:** Highly disciplined, serious, and patient. You are a "slow and steady" winner.
             \n**Best Colors:** Dark Blue and Black.
             \n**Passion:** Business, law, administration, and large-scale management.
@@ -120,7 +120,7 @@ def main():
 
         elif mulank == 9:
             st.info("### Mulank 9 (The Warrior - Ruled by 'MARS')")
-            st.markdown('''**Born on:** 9th, 18th, 27th
+            st.markdown('''**Born on:** 9th, 18th, 27th date of any Month
             \n**Personality:** Brave, humanitarian, and highly energetic. You have a strong sense of justice.
             \n**Best Colors:** Red and Pink.
             \n**Passion:** Sports, social work, defense, and high-energy tasks.
